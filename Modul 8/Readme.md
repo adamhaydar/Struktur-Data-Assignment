@@ -450,13 +450,13 @@ int main() {
 ```
 #### Output:
 <img width="694" height="595" alt="image" src="https://github.com/user-attachments/assets/0ea8f308-228b-4a84-94dd-e79f56350831" />
-
-
+     
 Program ini menjelaskan cara kerja Queue berbasis array melalui tiga pendekatan berbeda—pergeseran elemen, perpindahan head, dan circular queue—yang masing-masing menunjukkan perbedaan efisiensi dan pemanfaatan memori.
 
 #### Full code Screenshot:
-![240309_10h21m35s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/41e9641c-ad4e-4e50-9ca4-a0215e336b04)
-
+<img width="516" height="747" alt="image" src="https://github.com/user-attachments/assets/75b6e241-295c-4924-828b-43b1113f655d" />
+<img width="343" height="847" alt="image" src="https://github.com/user-attachments/assets/0926af0c-7d13-4d9a-ac50-d64c2103a160" />
+<img width="473" height="708" alt="image" src="https://github.com/user-attachments/assets/28881291-c3d7-436d-8d7b-700af6ea2fd4" />
 
 ## Kesimpulan
 Pada modul ini, dipelajari struktur data queue yang bekerja dengan prinsip FIFO (First In First Out), berbeda dengan stack sebelumnya yang menggunakan konsep LIFO (Last In First Out). Dalam pembuatannya, queue memiliki tiga jenis implementasi yang dipelajari.
