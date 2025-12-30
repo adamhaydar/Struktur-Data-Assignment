@@ -1,4 +1,4 @@
-# <h1 align="center">Modul 12 - Multi Linked List</h1>
+# <h1 align="center">Multi Linked List</h1>
 <p align="center">Adam Haydar</p>
 
 ## Dasar Teori
