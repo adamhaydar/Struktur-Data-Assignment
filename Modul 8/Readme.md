@@ -310,19 +310,6 @@ int main(){
 }
 //
 ```
-Pada program guided 1 ini, antrian dibuat menggunakan struktur data queue berbasis linked list dengan prinsip FIFO (First In First Out). Program ini menyediakan fungsi untuk menambahkan data ke dalam antrian, menghapus data pada bagian depan, mengosongkan seluruh isi queue, serta menampilkan hasilnya melalui fungsi viewQueue.
-
-### 2. [Nama Topik]
-
-```C++
-#include <iostream>
-using namespace std;
-
-int main() {
-    cout << "ini adalah file code guided praktikan" << endl;
-    return 0;
-}
-```
 Dari program ini dapat dipahami cara kerja struktur data queue dengan prinsip FIFO (yang masuk duluan, keluar duluan). Pada guided pertama, queue dibuat menggunakan linked list sehingga ukurannya bisa bertambah secara dinamis. Sedangkan pada guided kedua, queue dibuat menggunakan array dengan konsep circular queue supaya ruang yang kosong bisa dipakai kembali. Melalui percobaan enqueue dan dequeue, terlihat jelas perbedaan cara pengelolaan data pada masing-masing implementasi queue.
 
 ## Unguided 
@@ -462,4 +449,6 @@ Program ini menjelaskan cara kerja Queue berbasis array melalui tiga pendekatan 
 Pada modul ini, dipelajari struktur data queue yang bekerja dengan prinsip FIFO (First In First Out), berbeda dengan stack sebelumnya yang menggunakan konsep LIFO (Last In First Out). Dalam pembuatannya, queue memiliki tiga jenis implementasi yang dipelajari.
 
 ## Referensi
-[1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
+[1] Teman
+[2] Trihandoyo, D. (2013). APLIKASI SIMULASI PEMBELAJARAN STRUKTUR DATA MATERI QUEUE (Doctoral dissertation, Universitas Mercu Buana).
+[3] AI
