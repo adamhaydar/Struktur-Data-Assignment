@@ -306,7 +306,7 @@ Kode tersebut merupakan program yang digunakan untuk mengelola data buah dengan 
 
 #### Full code Screenshot:
 <img width="474" height="841" alt="image" src="https://github.com/user-attachments/assets/bb464579-82dd-46bc-8746-0a358536ddad" />
-<img width="301" height="976" alt="image" src="https://github.com/user-attachments/assets/16d5d4ea-0497-4453-b7ba-48448ba150d8" 
+<img width="655" height="833" alt="image" src="https://github.com/user-attachments/assets/713c38d3-e6e0-46fb-95cd-bb7c3b6109c5" />
 <img width="636" height="830" alt="image" src="https://github.com/user-attachments/assets/0b7bea22-7fe5-4f42-ab1d-a6f1e6366940" />
 
 ## Kesimpulan
