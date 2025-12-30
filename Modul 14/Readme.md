@@ -454,8 +454,9 @@ int main() {
 Pada materi ini, membahas beberapa fungsi pada graph seperti insertNode, connectNode, serta penelusuran graph menggunakan DFS dan BFS. DFS melakukan penelusuran dengan bantuan stack, sedangkan BFS menggunakan queue. Meskipun tanpa fungsi alokasi, findNode, dan resetVisited, proses tetap dapat berjalan dengan memodifikasi fungsi insertNode dan menginisialisasi nilai visited = 0 pada awal proses DFS dan BFS.
 
 #### Full code Screenshot:
-![240309_10h21m35s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/41e9641c-ad4e-4e50-9ca4-a0215e336b04)
-
+<img width="515" height="985" alt="image" src="https://github.com/user-attachments/assets/5937f581-161b-4d12-89d1-36dfdf4ce20b" />
+<img width="464" height="1003" alt="image" src="https://github.com/user-attachments/assets/15e19dca-5719-4e74-924b-e43b3ff297b3" />
+<img width="510" height="791" alt="image" src="https://github.com/user-attachments/assets/dc75c8f2-804d-4625-adc9-8b65777f650c" />
 
 ## Kesimpulan
 Dari praktikum ini dapat disimpulkan bahwa struktur data graph digunakan untuk merepresentasikan hubungan antar node. Program yang dibuat mampu menambahkan node, menghubungkan node secara dua arah, serta menampilkan isi graph. Selain itu, penelusuran graph dapat dilakukan dengan dua metode, yaitu DFS yang menelusuri node secara mendalam dan BFS yang menelusuri node berdasarkan urutan level. Melalui praktikum ini, konsep graph serta cara kerja DFS dan BFS dapat dipahami dan diterapkan dengan baik dalam program.
