@@ -528,12 +528,12 @@ int main() {
 Versi ini merupakan lanjutan dari program sebelumnya. Kalau sebelumnya hanya bisa menambah dan menampilkan data, sekarang programnya sudah bisa menghapus data, menghitung jumlah node, dan mengosongkan list, jadi cara kerjanya lebih lengkap dan mirip penggunaan linked list di kondisi sebenarnya.
 
 #### Full code Screenshot:
-**Soal 1 :**
+#### Soal 1 :
 <img width="460" height="732" alt="image" src="https://github.com/user-attachments/assets/66d8305d-2225-43a0-9b78-b45358950f82" />
 <img width="470" height="917" alt="image" src="https://github.com/user-attachments/assets/62e262e7-86f8-4531-bd8c-9cccbffaf1b4" />
 <img width="436" height="761" alt="image" src="https://github.com/user-attachments/assets/278bb185-37db-4ca0-b831-745d7e3e5891" />
 
-**Soal 2 :**
+#### Soal 2 :
 <img width="471" height="756" alt="image" src="https://github.com/user-attachments/assets/cc8a4c7e-c406-4101-9932-3f8200831e07" />
 <img width="319" height="1055" alt="image" src="https://github.com/user-attachments/assets/f4ea0eea-45ae-4e93-8eee-ccdb680b189d" />
 <img width="677" height="899" alt="image" src="https://github.com/user-attachments/assets/6e8dcafc-79d6-4823-807e-20031c7027b1" />
