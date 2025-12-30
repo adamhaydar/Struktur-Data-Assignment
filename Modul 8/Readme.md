@@ -1,4 +1,4 @@
-        # <h1 align="center">QUEUE</h1>
+
 <p align="center">Adam Haydar</p>
 
 ## Dasar Teori
