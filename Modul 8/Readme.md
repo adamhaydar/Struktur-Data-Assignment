@@ -1,4 +1,4 @@
-# <h1 align="center">QUEUE</h1>
+        # <h1 align="center">QUEUE</h1>
 <p align="center">Adam Haydar</p>
 
 ## Dasar Teori
@@ -20,7 +20,7 @@ int main() {
 ```
 Pada program guided 1 ini, antrian dibuat menggunakan struktur data queue berbasis linked list dengan prinsip FIFO (First In First Out). Program ini menyediakan fungsi untuk menambahkan data ke dalam antrian, menghapus data pada bagian depan, mengosongkan seluruh isi queue, serta menampilkan hasilnya melalui fungsi viewQueue.
 
-### 1. [Nama Topik]
+### 2. [Nama Topik]
 
 ```C++
 #include <iostream>
