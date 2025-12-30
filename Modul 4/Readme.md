@@ -263,27 +263,283 @@ Program ini menggunakan Singly Linked List untuk menyimpan data mahasiswa. Setia
 ## Unguided 
 
 ### 1. [Soal]
-
+**Singlyist.h**
 ```C++
+#ifndef SINGLYLIST_H
+#define SINGLYLIST_H
+
 #include <iostream>
 using namespace std;
 
+typedef int infotype;
+
+struct ElmList {
+    infotype info;
+    ElmList* next;
+};
+
+typedef ElmList* address;
+
+struct List {
+    address First;
+};
+
+void createList(List &L);
+address alokasi(infotype x);
+void dealokasi(address P);
+void insertFirst(List &L, address P);
+void printInfo(List L);
+
+#endif
+```
+**Singlylist.cpp**
+```C++
+#include "Singlylist.h"
+
+void createList(List &L) {
+    L.First = nullptr;
+}
+
+address alokasi(infotype x) {
+    address P = new ElmList;
+    if (P != nullptr) {
+        P->info = x;
+        P->next = nullptr;
+    }
+    return P;
+}
+
+void dealokasi(address P) {
+    delete P;
+}
+
+void insertFirst(List &L, address P) {
+    if (P != nullptr) {
+        P->next = L.First;
+        L.First = P;
+    }
+}
+
+void printInfo(List L) {
+    address P = L.First;
+    while (P != nullptr) {
+        cout << P->info << " ";
+        P = P->next;
+    }
+    cout << endl;
+}
+```
+**main.cpp**
+```C++
+#include "Singlylist.h"
+
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    List L;
+    address P1, P2, P3, P4, P5;
+
+    createList(L);
+
+    P1 = alokasi(2);
+    insertFirst(L, P1);
+
+    P2 = alokasi(0);
+    insertFirst(L, P2);
+
+    P3 = alokasi(8);
+    insertFirst(L, P3);
+
+    P4 = alokasi(12);
+    insertFirst(L, P4);
+
+    P5 = alokasi(9);
+    insertFirst(L, P5);
+
+    printInfo(L);
+
+    return 0;
+}
+```
+Program ini menunjukkan penggunaan singly linked list untuk menyimpan data bilangan bulat. Data dimasukkan ke dalam list menggunakan metode insert di awal, sehingga elemen terakhir yang dimasukkan akan berada di posisi paling depan. Dari hasil program, dapat dilihat bahwa linked list bekerja dengan menghubungkan data satu per satu menggunakan pointer, sehingga urutan data bisa berubah sesuai cara insert yang digunakan.
+
+### 2. [Soal]
+**SInglylist.h**
+```C++
+#ifndef SINGLYLIST_H
+#define SINGLYLIST_H
+
+#include <iostream>
+using namespace std;
+
+struct Node {
+    int data;
+    Node* next;
+};
+
+struct List {
+    Node* head;
+};
+
+void createList(List &L);
+Node* createNode(int nilai);
+void deleteNode(Node* P);
+void insertFirst(List &L, Node* P);
+void printList(List L);
+
+void deleteFirst(List &L, Node* &P);
+void deleteLast(List &L, Node* &P);
+void deleteAfter(Node* prec, Node* &P);
+int countList(List L);
+void deleteAll(List &L);
+
+#endif
+```
+**Singlylist.cpp**
+```C++
+#include "Singlylist.h"
+
+void createList(List &L) {
+    L.head = nullptr;
+}
+
+Node* createNode(int nilai) {
+    Node* P = new Node;
+    P->data = nilai;
+    P->next = nullptr;
+    return P;
+}
+
+void deleteNode(Node* P) {
+    delete P;
+}
+
+void insertFirst(List &L, Node* P) {
+    if (P != nullptr) {
+        P->next = L.head;
+        L.head = P;
+    }
+}
+
+void printList(List L) {
+    Node* P = L.head;
+    while (P != nullptr) {
+        cout << P->data << " ";
+        P = P->next;
+    }
+    cout << endl;
+}
+
+void deleteFirst(List &L, Node* &P) {
+    if (L.head != nullptr) {
+        P = L.head;
+        L.head = P->next;
+        P->next = nullptr;
+    } else {
+        P = nullptr;
+    }
+}
+
+void deleteLast(List &L, Node* &P) {
+    if (L.head == nullptr) {
+        P = nullptr;
+    } else if (L.head->next == nullptr) {
+        P = L.head;
+        L.head = nullptr;
+    } else {
+        Node* Q = L.head;
+        while (Q->next->next != nullptr) {
+            Q = Q->next;
+        }
+        P = Q->next;
+        Q->next = nullptr;
+    }
+}
+
+void deleteAfter(Node* prec, Node* &P) {
+    if (prec != nullptr && prec->next != nullptr) {
+        P = prec->next;
+        prec->next = P->next;
+        P->next = nullptr;
+    } else {
+        P = nullptr;
+    }
+}
+
+int countList(List L) {
+    int jumlah = 0;
+    Node* P = L.head;
+    while (P != nullptr) {
+        jumlah++;
+        P = P->next;
+    }
+    return jumlah;
+}
+
+void deleteAll(List &L) {
+    Node* P;
+    while (L.head != nullptr) {
+        deleteFirst(L, P);
+        deleteNode(P);
+    }
+}
+```
+**main.cpp**
+```C++
+#include "Singlylist.h"
+
+int main() {
+    List L;
+    Node *P, *hapus;
+
+    createList(L);
+
+    insertFirst(L, createNode(2));
+    insertFirst(L, createNode(0));
+    insertFirst(L, createNode(8));
+    insertFirst(L, createNode(12));
+    insertFirst(L, createNode(9));
+
+    deleteFirst(L, hapus);
+    deleteNode(hapus);
+
+    deleteLast(L, hapus);
+    deleteNode(hapus);
+
+    Node* prec = L.head;
+    deleteAfter(prec, hapus);
+    deleteNode(hapus);
+
+    printList(L);
+    cout << "Jumlah node : " << countList(L) << endl;
+
+    deleteAll(L);
+    cout << "\n- List Berhasil Terhapus -" << endl;
+    cout << "Jumlah node : " << countList(L) << endl;
+
     return 0;
 }
 ```
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
+<img width="545" height="388" alt="image" src="https://github.com/user-attachments/assets/bd14215d-2be4-439c-8ea1-0d49ffe75dc8" />
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Versi ini merupakan lanjutan dari program sebelumnya. Kalau sebelumnya hanya bisa menambah dan menampilkan data, sekarang programnya sudah bisa menghapus data, menghitung jumlah node, dan mengosongkan list, jadi cara kerjanya lebih lengkap dan mirip penggunaan linked list di kondisi sebenarnya.
 
 #### Full code Screenshot:
-![240309_10h21m35s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/41e9641c-ad4e-4e50-9ca4-a0215e336b04)
+**Soal 1 :**
+<img width="460" height="732" alt="image" src="https://github.com/user-attachments/assets/66d8305d-2225-43a0-9b78-b45358950f82" />
+<img width="470" height="917" alt="image" src="https://github.com/user-attachments/assets/62e262e7-86f8-4531-bd8c-9cccbffaf1b4" />
+<img width="436" height="761" alt="image" src="https://github.com/user-attachments/assets/278bb185-37db-4ca0-b831-745d7e3e5891" />
+
+**Soal 2 :**
+<img width="471" height="756" alt="image" src="https://github.com/user-attachments/assets/cc8a4c7e-c406-4101-9932-3f8200831e07" />
+<img width="319" height="1055" alt="image" src="https://github.com/user-attachments/assets/f4ea0eea-45ae-4e93-8eee-ccdb680b189d" />
+<img width="677" height="899" alt="image" src="https://github.com/user-attachments/assets/6e8dcafc-79d6-4823-807e-20031c7027b1" />
 
 
 ## Kesimpulan
 Secara keseluruhan, modul dan praktikum Singly Linked List membahas pengelolaan data secara dinamis melalui penggunaan node-node yang saling terhubung. Materi ini menjelaskan cara menambah, menghapus, serta mengolah atau menghitung data dalam list secara teratur dan efisien.
 
 ## Referensi
-[1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
+[1] Sofianti, H. A., Manullang, Y. V., Tampubolon, N. A., Naibaho, L. H., & Gunawan, I. (2025). Implementasi Struktur Data Array Dan Linked List Dalam Pengelolaan Data Mahasiswa. Menulis: Jurnal Penelitian Nusantara, 1(6), 871-877.
+[2] Nizar
+[3] Nopal
+[4] AI
