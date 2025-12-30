@@ -306,8 +306,10 @@ Kode ini menyajikan menu interaktif untuk mengelola sebuah array, seperti menamp
 #### Full code Screenshot:
 #### Soal 1 :
 <img width="506" height="1050" alt="image" src="https://github.com/user-attachments/assets/7f3d3e3e-0945-47f7-baed-a3a25a23ecd8" />
+
 #### Soal 2 :
 <img width="793" height="550" alt="image" src="https://github.com/user-attachments/assets/0288556c-9800-4c2b-9012-004f66f1b718" />
+
 #### Soal 3 :
 <img width="443" height="891" alt="image" src="https://github.com/user-attachments/assets/039fc2e5-b507-4499-b764-f7d10e8babc7" />
 
