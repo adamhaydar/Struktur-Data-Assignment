@@ -159,25 +159,160 @@ Program ini menunjukkan cara melakukan pencarian data pada linked list dengan be
 ### 1. [Soal]
 **Singlylist.h**
 ```C++
+#ifndef SINGLYLIST_H
+#define SINGLYLIST_H
+
 #include <iostream>
 using namespace std;
 
+#define Nil NULL
+
+typedef int infotype;
+typedef struct elmList *address;
+
+struct elmList {
+    infotype info;
+    address next;
+};
+
+struct List {
+    address first;
+};
+
+void createList(List &L);
+address alokasi(infotype x);
+void dealokasi(address P);
+void insertFirst(List &L, address P);
+void printInfo(List L);
+address findElm(List L, infotype x);
+int totalInfo(List L);
+
+#endif
+```
+**Singlylist.cpp**
+```C++
+#include "Singlylist.h"
+
+void createList(List &L) {
+    L.first = Nil;
+}
+
+address alokasi(infotype x) {
+    address P;
+    P = new elmList;
+    if (P != Nil) {
+        P->info = x;
+        P->next = Nil;
+    } else {
+        cout << "Alokasi gagal" << endl;
+    }
+    return P;
+}
+
+void dealokasi(address P) {
+    delete P;
+}
+
+void insertFirst(List &L, address P) {
+    if (L.first == Nil) {
+        L.first = P;
+    } else {
+        P->next = L.first;
+        L.first = P;
+    }
+}
+
+void printInfo(List L) {
+    address P = L.first;
+    if (P == Nil) {
+        cout << "List kosong" << endl;
+    } else {
+        while (P != Nil) {
+            cout << P->info << " ";
+            P = P->next;
+        }
+        cout << endl;
+    }
+}
+
+address findElm(List L, infotype x) {
+    address P = L.first;
+    while (P != Nil) {
+        if (P->info == x) {
+            return P;
+        }
+        P = P->next;
+    }
+    return Nil;
+}
+
+int totalInfo(List L) {
+    int total = 0;
+    address P = L.first;
+
+    while (P != Nil) {
+        total += P->info;
+        P = P->next;
+    }
+
+    return total;
+}
+```
+**main.cpp**
+```C++
+#include "Singlylist.h"
+
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    List L;
+    address P1, P2, P3, P4, P5;
+
+    createList(L);
+
+    P1 = alokasi(2);
+    insertFirst(L, P1);
+
+    P2 = alokasi(0);
+    insertFirst(L, P2);
+
+    P3 = alokasi(8);
+    insertFirst(L, P3);
+
+    P4 = alokasi(12);
+    insertFirst(L, P4);
+
+    P5 = alokasi(9);
+    insertFirst(L, P5);
+
+    printInfo(L);
+
+    address hasil = findElm(L, 8);
+    if (hasil != Nil) {
+        cout << "8 ditemukan dalam list" << endl;
+    } else {
+        cout << "8 tidak ditemukan" << endl;
+    }
+
+    int jumlah = totalInfo(L);
+    cout << "Total info dari kelima elemen adalah " << jumlah << endl;
+
     return 0;
 }
 ```
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
+<img width="528" height="287" alt="image" src="https://github.com/user-attachments/assets/321ebe2e-c4b4-45db-9db8-e38d928cdd50" />
 
-Kode tersebut merupakan program C++ yang digunakan untuk mengelola data buah dengan menerapkan struktur data Singly Linked List. Pada struktur ini, data disimpan secara dinamis di dalam node-node yang saling terhubung melalui pointer. Setiap node memuat tiga informasi utama, yaitu nama buah (tipe string), jumlah buah (tipe int), dan harga buah (tipe float), serta memiliki pointer next yang menunjuk ke node selanjutnya.
+
+Kode tersebut merupakan program yang digunakan untuk mengelola data buah dengan menerapkan struktur data Singly Linked List. Pada struktur ini, data disimpan secara dinamis di dalam node-node yang saling terhubung melalui pointer. Setiap node memuat tiga informasi utama, yaitu nama buah (tipe string), jumlah buah (tipe int), dan harga buah (tipe float), serta memiliki pointer next yang menunjuk ke node selanjutnya.
 
 #### Full code Screenshot:
-![240309_10h21m35s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/41e9641c-ad4e-4e50-9ca4-a0215e336b04)
-
+<img width="474" height="841" alt="image" src="https://github.com/user-attachments/assets/bb464579-82dd-46bc-8746-0a358536ddad" />
+<img width="301" height="976" alt="image" src="https://github.com/user-attachments/assets/16d5d4ea-0497-4453-b7ba-48448ba150d8" 
+<img width="636" height="830" alt="image" src="https://github.com/user-attachments/assets/0b7bea22-7fe5-4f42-ab1d-a6f1e6366940" />
 
 ## Kesimpulan
-Pada modul ini, mahasiswa mempelajari konsep dan mekanisme kerja Singly Linked List sebagai struktur data dinamis yang tersusun dari node-node berisi data dan pointer yang saling terhubung. Melalui kegiatan praktikum, mahasiswa memahami berbagai operasi dasar seperti pembuatan list, penambahan, penghapusan, pencarian, serta pembaruan data, sekaligus mempelajari pengelolaan memori menggunakan pointer. Modul ini menegaskan bahwa Singly Linked List merupakan konsep dasar yang penting dalam struktur data dinamis karena memungkinkan pengolahan data secara fleksibel dan efisien.
+Pada modul ini, mempelajari konsep dan mekanisme kerja Singly Linked List sebagai struktur data dinamis yang tersusun dari node-node berisi data dan pointer yang saling terhubung. Melalui kegiatan praktikum, mahasiswa memahami berbagai operasi dasar seperti pembuatan list, penambahan, penghapusan, pencarian, serta pembaruan data, sekaligus mempelajari pengelolaan memori menggunakan pointer. Modul ini menegaskan bahwa Singly Linked List merupakan konsep dasar yang penting dalam struktur data dinamis karena memungkinkan pengolahan data secara fleksibel dan efisien.
 
 ## Referensi
-[1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
+[1] [I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.](https://github.com/adamhaydar/Struktur-Data-Assignment/edit/main/Modul%205/Readme.md)
+[2] Ai
+[3] Teman
