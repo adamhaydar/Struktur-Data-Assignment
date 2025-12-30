@@ -8,7 +8,6 @@ C++ merupakan bahasa pemrograman yang dikembangkan dari C dan mendukung pemrogra
 ## Guided 
 
 ### 1. [Nama Topik]
-**Modul Codeblocks IDE & Pengenalan Bahas C++ (1)**
 ```C++
 #include <iostream>
 using namespace std;
