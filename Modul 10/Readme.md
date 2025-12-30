@@ -36,14 +36,14 @@ int main() {
 #### Output:
 ![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
 
-Pada materi tree ini dipelajari berbagai fungsi penting, mulai dari alokasi dan insertNode untuk memasukkan data, perhitungan jumlah node melalui hitungJumlahNode dan hitungTotalInfo, hingga penghitungan kedalaman tree dengan hitungKedalaman, di mana kedalaman dan ketinggian memiliki konsep serta fungsi perhitungan yang berbeda.
+kode ini blaboola
 
 #### Full code Screenshot:
 ![240309_10h21m35s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/41e9641c-ad4e-4e50-9ca4-a0215e336b04)
 
 
 ## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+Pada materi tree ini dipelajari fungsi-fungsi utama seperti alokasi dan insertNode untuk memasukkan data, perhitungan jumlah node melalui hitungJumlahNode dan hitungTotalInfo, serta penghitungan kedalaman dengan hitungKedalaman, di mana kedalaman dan ketinggian memiliki konsep dan fungsi perhitungan yang berbeda.
 
 ## Referensi
 [1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
