@@ -261,13 +261,15 @@ int main() {
 Kode tersebut digunakan untuk menampilkan dua array dua dimensi, yaitu A dan B, lalu menukar seluruh isi kedua array tersebut. Setelah proses pertukaran selesai, program menampilkan kembali masing-masing array untuk menunjukkan perubahan nilai yang terjadi.
 
 #### Full code Screenshot:
-**Soal 1 :**
+#### Soal 1 :
 <img width="758" height="987" alt="image" src="https://github.com/user-attachments/assets/11859516-e129-4f9a-9633-278d5bd649fb" />
-**Soal 2 :**
+
+#### Soal 2 :
 <img width="556" height="491" alt="image" src="https://github.com/user-attachments/assets/552e8264-845b-4006-97a6-f647636f9cc3" />
 <img width="550" height="447" alt="image" src="https://github.com/user-attachments/assets/c927e226-f9f9-450e-9664-df9f92a2b081" />
 <img width="475" height="401" alt="image" src="https://github.com/user-attachments/assets/400fbbbf-6cb2-433c-b589-df8370008ba8" />
-**Soal 3 :**
+
+#### Soal 3 :
 <img width="468" height="897" alt="image" src="https://github.com/user-attachments/assets/fd73f50d-810d-483e-a748-18eb13f44d80" />
 
 ## Kesimpulan
