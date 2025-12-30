@@ -259,6 +259,7 @@ int main(){
     return 0;
 }
 ```
+
 Program ini menggunakan Singly Linked List untuk menyimpan data mahasiswa. Setiap data disimpan dalam node yang saling terhubung satu arah, sehingga data bisa ditambahkan di awal, di tengah, atau di akhir list. Dari program ini terlihat bagaimana proses insert dan pengelolaan node dilakukan tanpa menggunakan array. Praktikum ini membantu memahami dasar kerja linked list serta cara mengatur data secara dinamis.
 ## Unguided 
 
@@ -359,6 +360,9 @@ int main() {
     return 0;
 }
 ```
+#### Output:
+<img width="536" height="137" alt="image" src="https://github.com/user-attachments/assets/884a390b-eced-4c10-8290-b3310a470511" />
+
 Program ini menunjukkan penggunaan singly linked list untuk menyimpan data bilangan bulat. Data dimasukkan ke dalam list menggunakan metode insert di awal, sehingga elemen terakhir yang dimasukkan akan berada di posisi paling depan. Dari hasil program, dapat dilihat bahwa linked list bekerja dengan menghubungkan data satu per satu menggunakan pointer, sehingga urutan data bisa berubah sesuai cara insert yang digunakan.
 
 ### 2. [Soal]
@@ -519,7 +523,7 @@ int main() {
 }
 ```
 #### Output:
-<img width="545" height="388" alt="image" src="https://github.com/user-attachments/assets/bd14215d-2be4-439c-8ea1-0d49ffe75dc8" />
+<img width="508" height="119" alt="image" src="https://github.com/user-attachments/assets/d94c780e-be9d-482d-8529-aa5da5753ac1" />
 
 Versi ini merupakan lanjutan dari program sebelumnya. Kalau sebelumnya hanya bisa menambah dan menampilkan data, sekarang programnya sudah bisa menghapus data, menghitung jumlah node, dan mengosongkan list, jadi cara kerjanya lebih lengkap dan mirip penggunaan linked list di kondisi sebenarnya.
 
