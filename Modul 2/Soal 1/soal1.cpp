@@ -2,49 +2,62 @@
 using namespace std;
 
 int main() {
-    int A[3][3], B[3][3], C[3][3], p;
+    int A[3][3], B[3][3];
+    int tambah[3][3], kurang[3][3], kali[3][3];
 
-    cout << "Masukkan elemen matriks A:\n";
-    for (int i = 0; i < 3; i++)
-        for (int j = 0; j < 3; j++)
+    cout << "Masukkan elemen matriks A (3x3):" << endl;
+    for(int i = 0; i < 3; i++) {
+        for(int j = 0; j < 3; j++) {
             cin >> A[i][j];
+        }
+    }
 
-    cout << "Masukkan elemen matriks B:\n";
-    for (int i = 0; i < 3; i++)
-        for (int j = 0; j < 3; j++)
+    cout << "\nMasukkan elemen matriks B (3x3):" << endl;
+    for(int i = 0; i < 3; i++) {
+        for(int j = 0; j < 3; j++) {
             cin >> B[i][j];
-
-    cout << "Pilih operasi (1=+, 2=-, 3=*): ";
-    cin >> p;
-
-    cout << "Hasil:\n";
-
-    if (p == 1) { 
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++)
-                cout << A[i][j] + B[i][j] << "\t";
-            cout << endl;
         }
-    } 
-    else if (p == 2) { 
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++)
-                cout << A[i][j] - B[i][j] << "\t";
-            cout << endl;
+    }
+
+    for(int i = 0; i < 3; i++) {
+        for(int j = 0; j < 3; j++) {
+            tambah[i][j] = A[i][j] + B[i][j];
+            kurang[i][j] = A[i][j] - B[i][j];
         }
-    } 
-    else if (p == 3) { 
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                C[i][j] = 0;
-                for (int k = 0; k < 3; k++)
-                    C[i][j] += A[i][k] * B[k][j];
-                cout << C[i][j] << "\t";
+    }
+
+    for(int i = 0; i < 3; i++) {
+        for(int j = 0; j < 3; j++) {
+            kali[i][j] = 0;
+            for(int k = 0; k < 3; k++) {
+                kali[i][j] += A[i][k] * B[k][j];
             }
-            cout << endl;
         }
-    } 
-    else cout << "Pilihan tidak valid!\n";
+    }
+
+    cout << "\nHasil Penjumlahan Matriks:" << endl;
+    for(int i = 0; i < 3; i++) {
+        for(int j = 0; j < 3; j++) {
+            cout << tambah[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    cout << "\nHasil Pengurangan Matriks:" << endl;
+    for(int i = 0; i < 3; i++) {
+        for(int j = 0; j < 3; j++) {
+            cout << kurang[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    cout << "\nHasil Perkalian Matriks:" << endl;
+    for(int i = 0; i < 3; i++) {
+        for(int j = 0; j < 3; j++) {
+            cout << kali[i][j] << " ";
+        }
+        cout << endl;
+    }
 
     return 0;
 }
