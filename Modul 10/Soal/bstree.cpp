@@ -15,7 +15,6 @@ void insertNode(address &root, infotype x) {
         root = alokasi(x);
         return;
     }
-
     if (x < root->info) {
         insertNode(root->left, x);
     } else if (x > root->info) {
